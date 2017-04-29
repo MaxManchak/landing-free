@@ -1,0 +1,95 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-icon-be {
+    width: 47px;
+    height: 32px;
+    background-position: -5px -5px;
+}
+
+.sprite-icon-dri {
+    width: 35px;
+    height: 35px;
+    background-position: -62px -5px;
+}
+
+.sprite-icon-fb {
+    width: 17px;
+    height: 35px;
+    background-position: -107px -5px;
+}
+
+.sprite-icon-male {
+    width: 49px;
+    height: 33px;
+    background-position: -134px -5px;
+}
+
+.sprite-icon-phone {
+    width: 41px;
+    height: 41px;
+    background-position: -193px -5px;
+}
+
+.sprite-services-design {
+    width: 122px;
+    height: 139px;
+    background-position: -244px -5px;
+}
+
+.sprite-services-seo {
+    width: 241px;
+    height: 142px;
+    background-position: -5px -154px;
+}
+
+.sprite-services-service {
+    width: 145px;
+    height: 79px;
+    background-position: -376px -5px;
+}
+
+.sprite-services-site {
+    width: 215px;
+    height: 130px;
+    background-position: -256px -154px;
+}
+
+.sprite-why-adaptive {
+    width: 53px;
+    height: 37px;
+    background-position: -5px -94px;
+}
+
+.sprite-why-heart {
+    width: 52px;
+    height: 48px;
+    background-position: -68px -94px;
+}
+
+.sprite-why-light {
+    width: 50px;
+    height: 54px;
+    background-position: -256px -294px;
+}
+
+.sprite-why-mehanic {
+    width: 60px;
+    height: 60px;
+    background-position: -316px -294px;
+}
+
+.sprite-why-sign {
+    width: 53px;
+    height: 54px;
+    background-position: -386px -294px;
+}
+
+.sprite-why-tag {
+    width: 56px;
+    height: 56px;
+    background-position: -449px -294px;
+}

@@ -1,0 +1,700 @@
+.header {
+  border-bottom: 1px solid rgba(177, 177, 177, 0.75);
+  background-color: white;
+  & .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  & ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: flex-start;
+    & li {
+      display: flex;
+      flex-direction: row;
+      align-content: center;
+    }
+  }
+}
+
+
+/*=============  NOTE  БЛОК КОНТАКТОВ В HEADER   =============*/
+
+.contact {
+  font-family: "Century Gothic", Arial, sans-serif;
+  font-size: $contacts-fs;
+  font-weight: 400;
+  line-height: 1.2;
+  position: relative;
+  display: block;
+  min-width: 270px;
+  margin-top: 53px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  padding-left: 100px;
+  cursor: pointer;
+  transition: color .3s;
+  text-decoration: none;
+  color: #686767;
+  &::after {
+    position: absolute;
+    bottom: -2px;
+    display: block;
+    width: calc(100% - 100px);
+    height: 0;
+    content: '';
+    transition: height .3s;
+    background-color: $prime;
+  }
+  &:hover::after {
+    height: 1px;
+  }
+  &:hover {
+    color: $second;
+  }
+  & i {
+    position: absolute;
+    top: -13px;
+    left: 0;
+    width: 72px;
+    height: 50px;
+    transition: background-image .3s;
+    border-right: 1px solid #b1b1b1;
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+  &--mail {
+    font-family: Candara;
+  }
+  &--phone {
+    margin-left: 15px;
+  }
+  &--phone i {
+    background-image: url(../image/icon-phone.png);
+  }
+  &--mail i {
+    background-image: url(../image/icon-male.png);
+  }
+  &--phone:hover i {
+    background-image: url(../image/icon-phone--hover.png);
+  }
+  &--mail:hover i {
+    background-image: url(../image/icon-male--hover.png);
+  }
+}
+
+
+/*=============  NOTE  БЛОК СОЦИАЛЬНЫХ СЕТЕЙ    =============*/
+
+.contact-social {
+  font-size: 0;
+  position: relative;
+  width: 47px;
+  height: 47px;
+  margin-top: 40px;
+  margin-right: 15px;
+  margin-bottom: 40px;
+  margin-left: 40px;
+  transition: background-image .3s;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  &::after {
+    position: absolute;
+    right: -33px;
+    display: block;
+    width: 1px;
+    height: 50px;
+    content: '';
+    background-color: #b1b1b1;
+  }
+  &--be {
+    background-image: url(../image/icon-be.png);
+  }
+  &--dri {
+    background-image: url(../image/icon-dri.png);
+  }
+  &--fb {
+    margin-right: 15px;
+    background-image: url(../image/icon-fb.png);
+  }
+  &--be:hover {
+    background-image: url(../image/icon-be--hover.png);
+  }
+  &--dri:hover {
+    background-image: url(../image/icon-dri--hover.png);
+  }
+  &--fb:hover {
+    margin-right: 15px;
+    background-image: url(../image/icon-fb--hover.png);
+  }
+  &--fb::after {
+    width: 0;
+  }
+}
+
+
+/*=============  NOTE  БЛОК НАВИГАЦИИ    =============*/
+
+.navigation {
+  & .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__logo {
+    font-family: Candara;
+    font-size: $h1-size;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-left: 15px;
+    padding-top: 150px;
+    text-decoration: none;
+    color: #404040;
+  }
+  &__menu {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: flex-end;
+  }
+  &__item {
+    font-family: Candara;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-right: 45px;
+    margin-left: 45px;
+    text-align: center;
+  }
+  &__item a {
+    font-size: $h3-size;
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+    padding-top: 150px;
+    cursor: pointer;
+    transition: color .3s;
+    text-decoration: none;
+    color: #404040;
+    &:hover {
+      color: $prime;
+    }
+    &::after, &::before {
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 0;
+      height: 3px;
+      content: '';
+      transition: width .5s;
+      transition-timing-function: ease-in-out;
+    }
+    &::before {
+      left: 50%;
+      margin-left: -55px;
+      background-color: $prime;
+    }
+    &::after {
+      right: 60%;
+      background-color: $second; // margin-left: -40px;
+    }
+    &:hover::before {
+      width: 107px;
+      background-color: $prime;
+    }
+    &:hover::after {
+      width: 26px;
+      background-color: $second;
+    }
+  }
+  &__item span {
+    font-size: $h5-size;
+    display: block;
+    margin-bottom: 115px;
+    color: #b1b1b1;
+  }
+  &__item:last-child {
+    margin-right: 15px;
+  }
+}
+
+
+/*=============  NOTE  Слайдер на странице  =============*/
+
+.slider-image {
+  overflow: hidden;
+  max-width: 100%;
+  height: 698px;
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+/*============= NOTE  Блок: ВИДЫ НАШИХ УСЛУГ   =============*/
+
+.services {
+  padding-top: 153px;
+  padding-bottom: 160px;
+  background-color: #f6f6f6;
+  &__title {
+    margin-bottom: 140px;
+  }
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: space-between;
+  }
+  &__consultation {
+    font-family: Candara;
+    font-size: $text-g;
+    font-weight: 400;
+    line-height: 1.2;
+    position: relative;
+    z-index: 2;
+    display: block;
+    overflow: hidden;
+    width: 350px;
+    margin: 0 auto;
+    padding: 25px 50px;
+    transition: color 0.8s;
+    text-decoration: none;
+    color: white;
+    &:hover {
+      color: #000;
+    }
+    &::before {
+      position: absolute;
+      z-index: -2;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      background: $second;
+    }
+    &::after {
+      position: absolute;
+      z-index: -1;
+      bottom: 100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      transition: transform 0.8s;
+      transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    }
+    &::after {
+      background-color: $prime;
+    }
+    &:hover::after {
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+}
+
+.service {
+  font-family: Candara;
+  font-size: $text-g;
+  line-height: 1.2;
+  width: 22%;
+  text-align: center;
+  color: #404040;
+  &__img {
+    width: 100%;
+    height: 190px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    &--site {
+      background-image: url(../image/services-site.png);
+    }
+    &--design {
+      background-image: url(../image/services-design.png);
+    }
+    &--seo {
+      background-image: url(../image/services-seo.png);
+    }
+    &--service {
+      background-image: url(../image/services-service.png);
+      background-position: center 33px;
+    }
+  }
+  &__title {
+    font-size: $h3-size;
+    margin-bottom: 27px;
+    color: #686767;
+  }
+  &__description {
+    margin-bottom: 130px;
+  }
+}
+
+
+/*============= NOTE  БЛОК: ПОЧЕМУ МЫ?   =============*/
+
+.why {
+  padding-top: 150px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #d7d7d7;
+  &__title {
+    margin-bottom: 140px;
+  }
+  &__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+.why-item {
+  font-family: Candara;
+  font-size: $text-g;
+  font-weight: 400;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: row;
+  width: 25%;
+  margin-right: 45px;
+  margin-bottom: 105px;
+  margin-left: 45px;
+  color: #686767;
+  justify-content: space-between;
+  &__img {
+    width: 150px;
+    height: 150px;
+    margin-right: 5px;
+    transition: border 1s, transform 1s;
+    transition-timing-function: ease-in;
+    transform: rotate(0deg); //    display: inline-block;
+    border: 3px solid $prime;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    &:hover {
+      transform: rotate(360deg);
+      border: 3px solid $second;
+    }
+    &--adaptive {
+      background-image: url(../image/why-adaptive.png);
+    }
+    &--light {
+      background-image: url(../image/why-light.png);
+    }
+    &--heart {
+      background-image: url(../image/why-heart.png);
+    }
+    &--mehanic {
+      background-image: url(../image/why-mehanic.png);
+    }
+    &--tag {
+      background-image: url(../image/why-tag.png);
+    }
+    &--sign {
+      background-image: url(../image/why-sign.png);
+    }
+  }
+  &__text {
+    max-width: 250px; //    display: inline-block;
+    padding-top: 10px;
+  }
+  &__title {
+    color: black;
+  }
+}
+
+
+/*=============  NOTE  Блок: ПОРТФОЛИО    =============*/
+
+.portfolio {
+  padding-top: 160px;
+  &__title {
+    margin-bottom: 135px;
+  }
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__column {
+    width: 24%;
+  }
+}
+
+.portfolio-item {
+  font-family: Candara;
+  font-weight: 400;
+  line-height: 1.2;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+  border: 1px solid #b1b1b1;
+  background-color: white;
+  & img {
+    width: 100%;
+    margin-bottom: 55px;
+    border: none;
+    border-bottom: 1px solid #b1b1b1;
+    outline: none;
+  }
+  &__title {
+    font-size: $h3-size;
+    margin-bottom: 3px;
+    color: #404040;
+  }
+  &__path {
+    font-size: $text-g;
+    margin-bottom: 30px;
+    color: #b1b1b1;
+  }
+  &__description {
+    font-size: $text-g;
+    margin-bottom: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+    color: #686767;
+  }
+  &__link {
+    font-size: $text-g;
+    position: relative;
+    display: block;
+    margin-bottom: 55px;
+    transition: color 0.5s;
+    text-decoration: none;
+    color: $second;
+    &::after {
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      display: block;
+      width: 65px;
+      height: 2px;
+      margin-left: -33px;
+      content: '';
+      transition: transform 1s;
+      transform: scaleY(0);
+      background-color: $second;
+    }
+    &:hover {
+      color: $prime;
+      &::after {
+        transform: scaleY(1);
+      }
+    }
+  }
+}
+
+
+/*============= NOTE БЛОК: НАША КОМАНДА    =============*/
+
+.we {
+  font-family: Candara;
+  font-weight: 400;
+  line-height: 1.2;
+  padding-top: 120px;
+  padding-bottom: 160px;
+  text-align: center;
+  &__title {
+    margin-bottom: 80px;
+  }
+}
+
+.slider {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  &__wrap {
+    display: block;
+    overflow: hidden;
+    width: 87.717391304347826%;
+    margin-bottom: 100px;
+  }
+  &__ul {
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    width: 20000em;
+    margin: 0;
+    padding: 0;
+    padding-top: 82px;
+    list-style: none;
+    transition: left 1s;
+    justify-content: flex-start;
+  }
+  &-prev, &-next {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 55px;
+    height: 55px;
+    margin-top: -30px;
+    transition: border-color .3s;
+    border-bottom: 1px solid #000;
+  }
+  &-prev {
+    left: 10px;
+    transform: rotate(45deg);
+    border-left: 1px solid #000;
+  }
+  &-next {
+    right: 10px;
+    transform: rotate(-45deg);
+    border-right: 1px solid #000;
+  }
+  &-prev:hover, &-next:hover {
+    border-color: $prime;
+  }
+  &__pagination {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    & i {
+      display: block;
+      box-sizing: border-box;
+      width: 25px;
+      height: 25px;
+      margin-right: 15px;
+      margin-left: 15px;
+      transition: background-color .5s;
+      border: 6px solid #d7d7d7;
+      border-radius: 50%;
+      background-color: #d7d7d7;
+      &.active {
+        background-color: transparent;
+      }
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.slide {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 440px;
+  margin-right: 50px;
+  margin-left: 50px;
+  padding-top: 240px;
+  border: 1px solid #b1b1b1;
+  background-color: white;
+  justify-content: flex-start;
+  & img {
+    position: absolute;
+    top: -81px;
+    left: 50%;
+    width: 240px;
+    height: 240px;
+    margin-left: -120px;
+    border: 1px solid #b1b1b1;
+    border-radius: 50%;
+  }
+  &__title {
+    font-size: $h3-size;
+    position: relative;
+    margin-bottom: 80px;
+    color: #b1b1b1;
+  }
+  &__title::before {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    display: block;
+    width: 85px;
+    height: 3px;
+    margin-left: -43px;
+    content: '';
+    background-color: $prime;
+  }
+  &__title::after {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    display: block;
+    width: 23px;
+    height: 3px;
+    margin-left: -30px;
+    content: '';
+    animation-name: a;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    background-color: $second;
+  }
+  & p {
+    font-size: $text-g;
+    margin-bottom: 60px;
+    padding-right: 40px;
+    padding-left: 40px;
+    color: #686767;
+    flex: 1;
+  }
+  &__social {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    margin-bottom: 100px;
+    padding: 0;
+    list-style: none;
+    align-content: center;
+    justify-content: center;
+    & a {
+      font-size: 0;
+      display: block;
+      width: 50px;
+      height: 50px;
+      margin-right: 15px;
+      margin-left: 15px;
+      transition: background-image .3s;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    & li:nth-child(1) a {
+      background-image: url(../image/icon-be.png);
+    }
+    & li:nth-child(2) a {
+      background-image: url(../image/icon-dri.png);
+    }
+    & li:nth-child(3) a {
+      background-image: url(../image/icon-fb.png);
+    }
+    & li:nth-child(1) a:hover {
+      background-image: url(../image/icon-be--hover.png);
+    }
+    & li:nth-child(2) a:hover {
+      background-image: url(../image/icon-dri--hover.png);
+    }
+    & li:nth-child(3) a:hover {
+      background-image: url(../image/icon-fb--hover.png);
+    }
+  }
+}
+
+@keyframes a {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

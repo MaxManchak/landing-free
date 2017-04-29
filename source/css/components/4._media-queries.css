@@ -1,0 +1,422 @@
+@media all and (max-width:1500px) {
+  /*=============  NOTE  БЛОК НАВИГАЦИИ    =============*/
+  .navigation {
+    & .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__logo {
+      font-size: $h2-size;
+      margin-left: 15px;
+      padding-top: 100px;
+    }
+    &__item {
+      margin-right: 30px;
+      margin-left: 30px;
+    }
+    &__item a {
+      font-size: $text-g;
+      margin-bottom: 20px;
+      padding-top: 100px;
+    }
+    &__item span {
+      font-size: $h6-size;
+      display: block;
+      margin-bottom: 85px;
+    }
+  }
+  /*=============  NOTE  Слайдер на странице  =============*/
+  .slider-image {
+    overflow: hidden;
+    max-width: 100%;
+    height: 550px;
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  /*=============  NOTE Блок: ВИДЫ НАШИХ УСЛУГ   =============*/
+  .services {
+    padding-top: 120px;
+    padding-bottom: 140px;
+    &__title {
+      margin-bottom: 100px;
+    }
+    &__consultation {
+      font-size: $h5-size;
+      width: 290px;
+    }
+  }
+  .service {
+    font-size: $h5-size;
+    width: 22%;
+    &__img {
+      width: 100%;
+      height: 140px;
+      &--site {
+        background-image: url('../image/services-site-180.png');
+      }
+      &--design {
+        background-image: url('../image/services-design-100.png');
+      }
+      &--seo {
+        background-image: url('../image/services-seo-180.png');
+      }
+    }
+    &__title {
+      font-size: $text-g;
+    }
+  }
+  /*============= NOTE   БЛОК: ПОЧЕМУ МЫ?    =============*/
+  .why {
+    &__title {
+      margin-bottom: 100px;
+    }
+    &__container {
+      justify-content: space-around;
+    }
+  }
+  .why-item {
+    font-size: $h5-size;
+    flex-direction: column;
+    width: 25%;
+    margin-right: 15px;
+    margin-bottom: 60px;
+    margin-left: 15px;
+    text-align: center;
+    align-items: center;
+    &__img {
+      width: 100px;
+      height: 100px;
+      margin-right: 0px;
+    }
+    &__text {
+      max-width: 250px;
+      padding-top: 10px;
+    }
+  }
+  /*=============  NOTE  Блок: ПОРТФОЛИО    =============*/
+  .portfolio {
+    padding-top: 110px;
+    &__title {
+      margin-bottom: 95px;
+    }
+  }
+  .portfolio-item {
+    & img {
+      width: 100%;
+      margin-bottom: 30px;
+      border: none;
+      outline: none;
+    }
+    &__title {
+      font-size: $text-g;
+    }
+    &__path {
+      font-size: $h5-size;
+      margin-bottom: 30px;
+    }
+    &__description {
+      font-size: $h5-size;
+      margin-bottom: 30px;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+    &__link {
+      font-size: $h5-size;
+      margin-bottom: 55px;
+    }
+  }
+  /*============= NOTE  БЛОК: НАША КОМАНДА    =============*/
+  .we {
+    padding-top: 120px;
+    padding-bottom: 100px;
+    &__title {
+      margin-bottom: 70px;
+    }
+  }
+  .slider {
+    &__wrap {
+      margin-bottom: 60px;
+    }
+    &__ul {
+      overflow: hidden;
+      padding-top: 82px;
+      transition: left 1s;
+    }
+    &-prev, &-next {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  .slide {
+    max-width: 440px;
+    margin-right: 30px;
+    margin-left: 30px;
+    padding-top: 155px;
+    & img {
+      top: -71px;
+      width: 180px;
+      height: 180px;
+      margin-left: -90px;
+    }
+    &__title {
+      font-size: $text-g;
+      margin-bottom: 30px;
+    }
+    &__title::before {
+      bottom: -10px;
+    }
+    &__title::after {
+      bottom: -10px;
+    }
+    & p {
+      font-size: $h5-size;
+      margin-bottom: 40px;
+      padding-top: 0;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+    &__social {
+      margin-bottom: 50px;
+      & a {
+        width: 35px;
+        height: 35px;
+        margin-right: 5px;
+        margin-left: 5px;
+      }
+      & li:nth-child(1) a {
+        background-image: url(../image/icon-be-min.png);
+      }
+      & li:nth-child(2) a {
+        background-image: url(../image/icon-dri-min.png);
+      }
+      & li:nth-child(3) a {
+        margin-left: -5px;
+        background-image: url(../image/icon-fb-min.png);
+      }
+    }
+  }
+}
+
+@media all and (max-width:1200px) {
+  /*=============  NOTE  БЛОК КОНТАКТОВ В HEADER   =============*/
+  .contact {
+    font-size: $h5-size;
+  }
+  /*=============  NOTE  БЛОК НАВИГАЦИИ    =============*/
+  .navigation {
+    & .container {
+      display: flex;
+      flex-direction: column;
+      padding-top: 40px;
+      justify-content: flex-start;
+    }
+    &__logo {
+      font-size: $h2-size;
+      margin-bottom: 15px;
+      margin-left: 15px;
+      padding-top: 0px;
+    }
+    &__item {
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+    &__item a {
+      font-size: $text-g;
+      margin-bottom: 10px;
+      padding-top: 5px;
+    }
+    &__item span {
+      font-size: $h6-size;
+      display: block;
+      margin-bottom: 30px;
+    }
+  }
+  /*=============  NOTE  БЛОК КОНТАКТОВ В HEADER   =============*/
+  .contact {
+    min-width: 252px;
+    margin-right: 15px;
+    padding-left: 70px;
+    & i {
+      width: 55px;
+    }
+    &::after {
+      width: calc(100% - 70px);
+    }
+  }
+  .contact-social {
+    &--be {
+      background-image: url(../image/icon-be-min.png);
+    }
+    &--dri {
+      background-image: url(../image/icon-dri-min.png);
+    }
+    &--fb {
+      margin-right: 15px;
+      background-image: url(../image/icon-fb-min.png);
+    }
+    &--fb::after {
+      width: 0;
+    }
+  }
+}
+
+
+/*======================================= max-width 960============================================*/
+
+@media all and (max-width:960px) {
+  /*=============  NOTE  БЛОК КОНТАКТОВ В HEADER   =============*/
+  .header .contact-wrap {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+  }
+  .contact {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    padding-left: 0;
+    &::after {
+      width: 100%;
+    }
+    & i {
+      display: none;
+    }
+    &-social {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  /*=============  NOTE  Слайдер на странице  =============*/
+  .slider-image {
+    overflow: hidden;
+    max-width: 100%;
+    height: 350px;
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  /*============= NOTE  Блок: ВИДЫ НАШИХ УСЛУГ   =============*/
+  .services {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    &__title {
+      margin-bottom: 80px;
+    }
+    &__container {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+  .service {
+    width: 40%;
+  }
+  /*=============  NOTE  Блок: ПОРТФОЛИО    =============*/
+  .portfolio {
+    padding-top: 80px;
+    &__title {
+      margin-bottom: 75px;
+    }
+    &__container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    &__column {
+      width: 40%;
+    }
+  }
+  /*============= NOTE БЛОК: НАША КОМАНДА    =============*/
+  .we {
+    font-family: Candara;
+    font-weight: 400;
+    line-height: 1.2;
+    padding-top: 120px;
+    padding-bottom: 160px;
+    text-align: center;
+    &__title {
+      margin-bottom: 80px;
+    }
+  }
+  .slider {
+    &__pagination {
+      display: none;
+    }
+  }
+}
+
+
+/*======================================= max-width 700============================================*/
+
+@media all and (max-width:700px) {
+  .navigation {
+    &__item span {
+      display: none;
+    }
+    &__item a {
+      margin-bottom: 30px;
+      &::after, &::before {
+        top: 102%;
+      }
+      &::before {
+        left: 0;
+        margin-left: 0;
+      }
+      &::after {
+        right: 60%;
+        width: 0;
+      }
+      &:hover::before {
+        width: 100%;
+      }
+      &:hover::after {
+        width: 0;
+      }
+    }
+  }
+  .slide {
+    max-width: 600px;
+    margin: 0;
+  }
+}
+
+@media all and (max-width:600px) {
+  .header .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact {
+    text-align: center;
+  }
+  .navigation__item a {
+    font-size: 16px;
+  }
+  .why-item {
+    width: 40%;
+  }
+  .slider-image {
+    height: 300px;
+  }
+}
+
+@media all and (max-width:400px) {
+  .service {
+    width: 100%;
+    &__description {
+      margin-bottom: 60px;
+    }
+  }
+  .why-item {
+    width: 100%;
+  }
+  .portfolio__column {
+    width: 100%;
+  }
+  .slider-image {
+    height: 250px;
+  }
+}
